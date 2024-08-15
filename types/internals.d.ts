@@ -1,4 +1,29 @@
 /**
+ * The `BatteryManager` interface provides information about the battery of the device.
+ */
+declare interface BatteryManager {
+    /**
+     * level of the battery.
+     */
+    level: number;
+
+    /**
+     * charging status of the battery.
+     */
+    charging: boolean;
+
+    /**
+     * charging time of the battery.
+     */
+    chargingTime: number;
+
+    /**
+     * discharging time of the battery.
+     */
+    dischargingTime: number;
+}
+
+/**
  * The `internal_read_text_file` function reads a file from the file system.
  */
 declare function internal_read_text_file(path: string): string;
@@ -67,3 +92,8 @@ declare function internal_delete_env(key: string): void;
  * The `internal_get_env_keys` function to get the environment variable keys.
  */
 declare function internal_get_env_keys(): string[];
+
+/**
+ * The `internal_get_battery` function to get the battery information.
+ */
+declare function internal_get_battery(): Promise<BatteryManager>;

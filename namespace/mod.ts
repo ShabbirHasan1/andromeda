@@ -224,6 +224,18 @@ const Andromeda = {
 };
 
 /**
+ * The `navigator` namespace for interacting with the runtime.
+ */
+const navigator = {
+  /**
+   * The `getBattery` function returns a Promise to be resolved with the battery status.
+   */
+  getBattery(): Promise<BatteryManager> {
+    return internal_get_battery();
+  },
+};
+
+/**
  * The `prompt` function prompts the user for input.
  *
  * @example

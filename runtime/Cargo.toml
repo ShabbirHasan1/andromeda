@@ -7,6 +7,7 @@ readme = "../README.md"
 
 [dependencies]
 andromeda-core = { workspace = true }
+battery = { workspace = true }
 nova_vm = { workspace = true }
 anymap = { workspace = true }
 tokio = { workspace = true }
