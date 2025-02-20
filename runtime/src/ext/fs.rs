@@ -68,7 +68,7 @@ impl FsExt {
         Ok(Value::from_string(agent, content, gc.nogc()))
     }
 
-    // /// Write a text file with the content of the second argument.
+    /// Write a text file with the content of the second argument.
     pub fn internal_write_text_file(
         agent: &mut Agent,
         _this: Value,
@@ -168,4 +168,6 @@ impl FsExt {
 
         Ok(Value::Integer(SmallInteger::from(rid.index())))
     }
+
+
 }
